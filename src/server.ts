@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send("testing deployments")
+  res.send("testing deployments, go to /products on here")
 })
 
 app.use('/products', require('./controller/productController'))
