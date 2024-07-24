@@ -9,7 +9,10 @@ const port = process.env.PORT;
 app.use(cors())
 app.use(express.json());
 
-// app.use('/users')
+app.get('/', (req, res) => {
+  res.send("testing deployments")
+})
+
 app.use('/products', require('./controller/productController'))
 
 app.listen(port, () => {
